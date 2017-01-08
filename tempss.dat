@@ -1,0 +1,104 @@
+VILIN CHIKEN	2F4K	35	ALFA	HOW FAST FOLDING PROTEINS FOLD				LSDEDFKAVFGMTRSAFANLPLWLQQHLLKEKGLF
+
+
+CHIGNOLIN	not on pdb, on suppl info of ref 38	10	--	HOW FAST FOLDING PROTEINS FOLD				YYDPETTGWY
+
+
+BBA	1FME	28	ALFABETA	HOW FAST FOLDING PROTEINS FOLD				EQYTAKYKGRTFRNEKELRDFIEKFKGR
+
+
+TRPCAGE TCB10	2JOF	20	ALFA	HOW FAST FOLDING PROTEINS FOLD				DAYAQWLADGGPSSGRPPPS
+
+
+WW DOMAIN	2F21	35	BETA	HOW FAST FOLDING PROTEINS FOLD				GSKLPPGWEKRMSRDGRVYYFNHITGTTQFERPSG — n ta mto facil pegar a estrutura
+
+
+TRPCAGE TC5B	1L2Y	20	ALFA	HERCE 	2006	2,2A = FOLDED	http://www.ncbi.nlm.nih.gov/pubmed/11979279	NLYIQWLKDGGPSSGRPPPS
+
+BBA5 1T8J 23 ALFABETA MULTIPLEXED 1T8J
+
+
+
+Ostermeir 2014
+Chignolin 
+TrpCage
+SH3-loop 10 res
+
+
+dissertacao karina dallagno
+1ZDD -> Z34C  length 35 - alfa (artigo)
+1K43 - beta 14
+1ROP alfa 54
+1UTG alfa 70
+1GAB alfa 53
+1GB1 alfabeta 56
+2ERL alfa 40res
+1YWJ beta 41res
+1GPT alfabeta 47
+
+
+
+——— KMC GENERALIZED MOVE SET 2015 - ARTIGO SOBRE FOLDING
+TRPCAGE 1L2y NLYIQWLKDGGPSSGRPPPS ALFA 22 
+GB1 2J52 GEWTYDDATKTFTVTE 47 ALFABETA  18
+TRPZIP4 1LE3 GEWTWDDATKTWTWTE 41 (NMR-Model #1) BETA 16 
+
+rpCage—NLYIQWLKDGGPSSGRPPPS 39ARTIGO DE EFERENCIA PDB: 1L2Y (NMR-Model #1), GB1—GEWTYDDATKTFTVTE47 PDB: 2J52 (NMR-Model #1), TrpZip4—GEWTWDDATKTWTWTE41 PDB: 1LE3
+— analisa rmsd ca  por tempo
+
+
+Upon clustering, we find only 5 main clusters ranging from the folded conformer at RMSDC↵ C↵ 0.23 nm to the unfolded cluster at RMSDC↵ C↵ 0.8 nm. In the main unfolded cluster at RMSDC↵ C↵ of 0.6 nm, the loop is already formed and a hydrogen-bond exists between Asp6 and Thr11, indi- cating an early zipper mechanism for TrpZip4 (Cluster 1 a, b see Figure 5(b)). 
+
+
+
+Small peptides have been shown experimentally to fold into their native 3-dimensional structure on timescales of μs or longer, in many cases following multiple possible folding pathways.1 Molecular dynamics (MD) and Monte-Carlo (MC) simulations serve as tools to theoretically describe the folding kinetics and thermodynamics of these peptides.2 Emerging from simulations is a complex energy surface underlying fold- ing, involving fluctuations of the peptide within metastable energy minima, followed by rare event transitions over the barriers separating the minima.3–7
+
+
+We continued with simulations on GB1 and TrpZip4, two  -hairpin peptides. The computationally determined folding times of GB1 ranged from 3.2 μs to 7.8 μs. In the case of TrpZip4, the peptide folded in a time-range from 2.5 μs to 16 μs.Wefindthat4outof10GB1and3outof5TrpZip4 simulations agree well with the experimental folding times of GB1 (6 μs) and TrpZip4 (15 μs). From our simulations, we find that GB1 performs a repeated process of collapse and
+
+em suma, da pra tirar algo de trpzip e gb1 - todos pequenos.
+
+—————————————
+
+do grupo do kolinski int j mol sci 2013, 14
+
+outro artigo, olha o que fala.
+In general, the first 50 ns of REMD started from an extended conformation yielded nearly no native-like conformations. 
+a partir das geradas por CABS, foi 87% folded.
+isso sera trabalho futuro
+
+analises
+ACCEPTANCE RATIO The analysis of energy distributions of neighboring replicas showed, that the application of the CABS-generated conformations does not change the replica exchange probability for either force field. For Amber99sb it is ca. 0.19 and 0.17 for OPLSAA
+
+Overlapped potential energy histograms are presented in Figure 2 for the OPLSAA force field and the CABS starting option. Histograms are broader for higher temperature replicas and the exchange probability for them is a little higher
+
+MOSTRA MEU GRAFICO COM P(E)  por E … estranho chamar de histogram, ele analisa o acc.ratio junto.
+analisar SECONDARY STRUCTURES…. mas analisar partes que eu SEI que sao ASSIM OU ASSADO. ASSIM CONSEGUIREI COMPARAR METODOS DIFERENTES, vou gerar para todas temperaturas, mas vou escolher uma s[o para apresentar.
+
+NESSE ARTIGO ELE MOSTRA UM METODO PARA CALCULAR SE ESTA FOLDED OU NAO! TOP HEIN! ASSIM DA PRA FAZER UM COMPARATIVO DAS TRAJETORIAS RESULTANTES!!! CREIO QUE CONSIGO ACHAR A REFRENCIA QUE DIZ QUE <2 = FOLDED, ASSIM POSSO FAZER ESSA ANALISE TB. Um script que le meus rmsds e retorna % para cada temperatura.
+
+Best and Mittal [38]Best and Mittal [38]. Briefly, conformations whose dRMS was less than 0.15Å were included in the near-native cluster. dRMS was calculated as follows:
+All REMD simulations were done with the GROMACS package (Version 4.5.3) [67]. Analysis was performed with Bioshell [68,69] and dssp [70]
+
+ GB1 β-hairpin !!!! BETA HAIRPIN
+C-terminal β-hairpin of the 2GB1 protein, which is colored red.
+
+
+
+————————
+
+preciso escolher partes das proteinas e gerar dssp
+
+
+————
+Assessing the accuracy of physical models used in protein-folding simulations: quantitative evidence from long molecular dynamics simulations§ SHAW  fala sobre trabalhos anteriores de folding gb1 CspTm Protein L
+trabalho deles envolveu chignolin, trp-cage, villin e Nle/Nke villin - n mostra mta coisa aproveitavel.
+
+
+———
+	
+
+
+
+
+
