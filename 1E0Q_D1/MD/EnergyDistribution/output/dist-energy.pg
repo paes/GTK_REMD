@@ -1,0 +1,15 @@
+#!/usr/local/bin/gnuplot
+set term pdf
+set output "output-dist.pdf"
+ 
+
+plot "dist-energy_269.5.xvg" u 1:2  with lines lw 3.5 t "269.5" smooth bezier \
+, "dist-energy_290.24.xvg" u 1:2 with lines lw 3.5 t "290.24" smooth bezier \
+, "dist-energy_312.2.xvg" u 1:2 with lines lw 3.5 t "312.2" smooth bezier \
+, "dist-energy_335.47.xvg" u 1:2 with lines lw 3.5 t "335.47" smooth bezier \
+, "dist-energy_360.13.xvg" u 1:2 with lines lw 3.5 t "360.13" smooth bezier \
+, "dist-energy_386.27.xvg" u 1:2 with lines lw 3.5 t "386.27" smooth bezier \
+, "dist-energy_413.96.xvg" u 1:2 with lines lw 3.5 t "413.96" smooth bezier \
+, "dist-energy_443.33.xvg" u 1:2 with lines lw 3.5 t "443.33" smooth bezier \
+, "dist-energy_474.39.xvg" u 1:2 with lines lw 3.5 t "474.39" smooth bezier \
+, "dist-energy_507.38.xvg" u 1:2 with lines lw 3.5 t "507.38" smooth bezier \

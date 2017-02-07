@@ -1,0 +1,71 @@
+[strings]
+csvDelimiter = ,
+
+fileInputPath = ../
+fileOutputPath = output
+
+sqlEnergyTable = create table energy_tbl (ID integer primary key, filename text, nstep number, time_ps number, temp0 number, eptot number, etot number, ektot number, kt number, energy_by_kt number, exp_energy_by_kt number, partition_function number, pE number, ln_pE number)
+sqlTruncateEnergyTable = delete from energy_tbl
+sqlInsertEnergyTable = insert into energy_tbl (filename, nstep, time_ps, etot, ektot, eptot, temp0) values ('%s',%s,%s,%s,%s,%s,%s)
+sqlUpdateEnergyTable = update energy_tbl set kt = %s, energy_by_kt = %s, exp_energy_by_kt = %s where id = %s 
+sqlUpdateEnergyTablepE = update energy_tbl set partition_function = %s, pE = %s, ln_pE = %s where id = %s 
+
+sqlTemperatureTable = create table temperature_tbl (ID int primary key, temperature number, temp_kt)
+sqlTruncateTemperatureTable = delete from temperature_tbl
+sqlInsertTemperatureTable = insert into temperature_tbl (temperature, temp_kt) values (%s, %s)
+
+#Queries to Extract
+sqlSelectbyTemperature = select a.id, a.eptot, b.temp_kt from energy_tbl a inner join temperature_tbl b on a.temp0 = b.temperature where a.temp0 = %s order by eptot
+sqlSelectPartition_Function = select temp0, sum(exp_energy_by_kt) as partition_function from energy_tbl where temp0 = %s group by temp0
+sqlSelectpEbyTemperature = select a.id, a.exp_energy_by_kt from energy_tbl a where a.temp0 = %s order by a.eptot
+sqlPEbyTemperature = select a.time_ps, a.eptot from energy_tbl a where a.temp0 = %s order by a.time_ps
+sqlSelectTemperature = select temperature from temperature_tbl order by temperature
+
+filestoSearch = remd_00*.mdout.*
+temperatureFile = temperatures.dat
+fileToSave = energy_%s.xvg
+fileToSaveDist = dist-energy_%s.xvg
+headerToSave = @    title "Amber Energies"^@    xaxis  label "Time (ps)"^@    yaxis  label "(kJ/mol)"^@TYPE xy^@ view 0.15, 0.15, 0.75, 0.85^@ legend on^@ legend box on^@ legend loctype view^@ legend 0.78, %s^@ legend length 2^@ s%s legend "%s K"
+lineToSave = %s %s
+g_Analyze = g_analyze -f %s -dist %s
+catCommand = cat %s > %s/dist-energy_all.xvg
+
+gnuplotDistFile = dist-energy.pg
+gnuplotEnergyFile = energy.pg
+gnuplotHeader = which gnuplot
+gnuplot_line1 = plot "%s" u 1:2  with lines lw 3.5 t "%s" smooth bezier \
+gnuplot_line2 = , "%s" u 1:2 with lines lw 3.5 t "%s" smooth bezier \
+
+[numbers]
+dryrun = False
+windowsRun = False
+dryrunLimit = 2
+commitLimit = 10
+temp25_Kmol = 0.593
+temp25_Kelvin = 298
+legendRowStart = 0.85
+legendRowOffset = -0.05
+legendRow = 0
+
+gnuplot_commands = ['set term pdf','set output "output.pdf"']
+
+fields = ['NSTEP','TIME(PS)','Etot','EKtot','EPtot', 'TEMP0']
+fieldsValueOffset = 2
+
+actions = {'Load':True,'Calculate':False,'Temp':0,'Write':True,'Dist':True,'Cat':True,'GnuPlot':True, 'GnuPlotType':{'Energy':True,'Distribution':True}}
+
+[logging]
+Folder = log
+ArchiveFolder = log/archive
+FileNameFormat = log/ensembl_retriever_{0:%Y%m%d%H%M%S}.log
+FileNameFunction = datetime.datetime.now()
+LineFormat = %(asctime)s - %(levelname)s: %(message)s
+Level = DEBUG
+GenerateArchive = True
+FilesToKeep = 10
+PrintToConsole = True
+
+[database]
+dbType = SQLite
+dbConnectionString = data/energydb.db
+sqlMetadataTable = sqlite_master

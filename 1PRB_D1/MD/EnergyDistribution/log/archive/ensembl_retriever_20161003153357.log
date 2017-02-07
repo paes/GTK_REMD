@@ -1,0 +1,42 @@
+2016-10-03 15:33:57,094 - INFO: Starting process...
+2016-10-03 15:33:57,101 - INFO: Database opened.
+2016-10-03 15:33:57,553 - INFO: Cleaning Database...
+2016-10-03 15:33:57,554 - INFO: Loading Files...
+2016-10-03 15:33:57,701 - INFO: About to generate XVG files...
+2016-10-03 15:33:57,701 - INFO: Generating file for temperature of  269.5
+2016-10-03 15:33:57,701 - INFO: Generating file for temperature of  280.89
+2016-10-03 15:33:57,702 - INFO: Generating file for temperature of  292.67
+2016-10-03 15:33:57,702 - INFO: Generating file for temperature of  304.83
+2016-10-03 15:33:57,702 - INFO: Generating file for temperature of  317.39
+2016-10-03 15:33:57,702 - INFO: Generating file for temperature of  330.38
+2016-10-03 15:33:57,702 - INFO: Generating file for temperature of  343.77
+2016-10-03 15:33:57,703 - INFO: Generating file for temperature of  357.61
+2016-10-03 15:33:57,703 - INFO: Generating file for temperature of  371.9
+2016-10-03 15:33:57,703 - INFO: Generating file for temperature of  386.66
+2016-10-03 15:33:57,703 - INFO: Generating file for temperature of  401.79
+2016-10-03 15:33:57,704 - INFO: Generating file for temperature of  417.53
+2016-10-03 15:33:57,704 - INFO: Generating file for temperature of  433.79
+2016-10-03 15:33:57,704 - INFO: Generating file for temperature of  450.6
+2016-10-03 15:33:57,704 - INFO: Generating file for temperature of  467.95
+2016-10-03 15:33:57,705 - INFO: Generating file for temperature of  485.88
+2016-10-03 15:33:57,705 - INFO: Generating file for temperature of  504.4
+2016-10-03 15:33:57,705 - INFO: Generating file for temperature of  523.53
+2016-10-03 15:33:57,705 - INFO: Generating distribution file for temperature of  269.5
+2016-10-03 15:33:59,337 - INFO: Generating distribution file for temperature of  280.89
+2016-10-03 15:33:59,342 - INFO: Generating distribution file for temperature of  292.67
+2016-10-03 15:33:59,349 - INFO: Generating distribution file for temperature of  304.83
+2016-10-03 15:33:59,354 - INFO: Generating distribution file for temperature of  317.39
+2016-10-03 15:33:59,360 - INFO: Generating distribution file for temperature of  330.38
+2016-10-03 15:33:59,365 - INFO: Generating distribution file for temperature of  343.77
+2016-10-03 15:33:59,369 - INFO: Generating distribution file for temperature of  357.61
+2016-10-03 15:33:59,374 - INFO: Generating distribution file for temperature of  371.9
+2016-10-03 15:33:59,379 - INFO: Generating distribution file for temperature of  386.66
+2016-10-03 15:33:59,384 - INFO: Generating distribution file for temperature of  401.79
+2016-10-03 15:33:59,389 - INFO: Generating distribution file for temperature of  417.53
+2016-10-03 15:33:59,395 - INFO: Generating distribution file for temperature of  433.79
+2016-10-03 15:33:59,400 - INFO: Generating distribution file for temperature of  450.6
+2016-10-03 15:33:59,405 - INFO: Generating distribution file for temperature of  467.95
+2016-10-03 15:33:59,436 - INFO: Generating distribution file for temperature of  485.88
+2016-10-03 15:33:59,442 - INFO: Generating distribution file for temperature of  504.4
+2016-10-03 15:33:59,446 - INFO: Generating distribution file for temperature of  523.53
+2016-10-03 15:33:59,692 - INFO: Ending process...

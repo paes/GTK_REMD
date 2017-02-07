@@ -1,0 +1,108 @@
+cd 1UNC_1ns_1_RUN4/MD/EnergyDistribution/output/
+mkdir ../../../../R4R5R6 #crio uma pasta antes da pasta da simulacao (onde as outras simulacoes tb estao)
+cp ../../../../group_energies.py ../../../../R4R5R6/group_energies.py
+cp ../../temperatures.dat ../../../../R4R5R6/temperatures.dat
+
+      tail -n +13 dist-energy_269.5.xvg >  ../../../../R4R5R6/dist_269.5_4.dat 
+      tail -n +13 dist-energy_285.22.xvg >  ../../../../R4R5R6/dist_285.22_4.dat 
+      tail -n +13 dist-energy_301.66.xvg >  ../../../../R4R5R6/dist_301.66_4.dat 
+      tail -n +13 dist-energy_318.76.xvg >  ../../../../R4R5R6/dist_318.76_4.dat 
+      tail -n +13 dist-energy_336.61.xvg >  ../../../../R4R5R6/dist_336.61_4.dat 
+      tail -n +13 dist-energy_355.26.xvg >  ../../../../R4R5R6/dist_355.26_4.dat 
+      tail -n +13 dist-energy_374.74.xvg >  ../../../../R4R5R6/dist_374.74_4.dat 
+      tail -n +13 dist-energy_395.07.xvg >  ../../../../R4R5R6/dist_395.07_4.dat 
+      tail -n +13 dist-energy_416.32.xvg >  ../../../../R4R5R6/dist_416.32_4.dat 
+      tail -n +13 dist-energy_438.5.xvg  >  ../../../../R4R5R6/dist_438.5_4.dat 
+      tail -n +13 dist-energy_461.67.xvg >  ../../../../R4R5R6/dist_461.67_4.dat 
+      tail -n +13 dist-energy_485.87.xvg >  ../../../../R4R5R6/dist_485.87_4.dat 
+      tail -n +13 dist-energy_511.14.xvg >  ../../../../R4R5R6/dist_511.14_4.dat 
+      tail -n +13 dist-energy_537.54.xvg >  ../../../../R4R5R6/dist_537.54_4.dat 
+
+cd ../../../../1UNC_1ns_1_RUN5/MD/EnergyDistribution/output/
+
+
+      tail -n +13 dist-energy_269.5.xvg >  ../../../../R4R5R6/dist_269.5_5.dat 
+      tail -n +13 dist-energy_285.22.xvg >  ../../../../R4R5R6/dist_285.22_5.dat 
+      tail -n +13 dist-energy_301.66.xvg >  ../../../../R4R5R6/dist_301.66_5.dat 
+      tail -n +13 dist-energy_318.76.xvg >  ../../../../R4R5R6/dist_318.76_5.dat 
+      tail -n +13 dist-energy_336.61.xvg >  ../../../../R4R5R6/dist_336.61_5.dat 
+      tail -n +13 dist-energy_355.26.xvg >  ../../../../R4R5R6/dist_355.26_5.dat 
+      tail -n +13 dist-energy_374.74.xvg >  ../../../../R4R5R6/dist_374.74_5.dat 
+      tail -n +13 dist-energy_395.07.xvg >  ../../../../R4R5R6/dist_395.07_5.dat 
+      tail -n +13 dist-energy_416.32.xvg >  ../../../../R4R5R6/dist_416.32_5.dat 
+      tail -n +13 dist-energy_438.5.xvg  >  ../../../../R4R5R6/dist_438.5_5.dat 
+      tail -n +13 dist-energy_461.67.xvg >  ../../../../R4R5R6/dist_461.67_5.dat 
+      tail -n +13 dist-energy_485.87.xvg >  ../../../../R4R5R6/dist_485.87_5.dat 
+      tail -n +13 dist-energy_511.14.xvg >  ../../../../R4R5R6/dist_511.14_5.dat 
+      tail -n +13 dist-energy_537.54.xvg >  ../../../../R4R5R6/dist_537.54_5.dat 
+
+
+
+cd ../../../../1UNC_1ns_1_RUN6/MD/EnergyDistribution/output/
+
+      tail -n +13 dist-energy_269.5.xvg >  ../../../../R4R5R6/dist_269.5_6.dat 
+      tail -n +13 dist-energy_285.22.xvg >  ../../../../R4R5R6/dist_285.22_6.dat 
+      tail -n +13 dist-energy_301.66.xvg >  ../../../../R4R5R6/dist_301.66_6.dat 
+      tail -n +13 dist-energy_318.76.xvg >  ../../../../R4R5R6/dist_318.76_6.dat 
+      tail -n +13 dist-energy_336.61.xvg >  ../../../../R4R5R6/dist_336.61_6.dat 
+      tail -n +13 dist-energy_355.26.xvg >  ../../../../R4R5R6/dist_355.26_6.dat 
+      tail -n +13 dist-energy_374.74.xvg >  ../../../../R4R5R6/dist_374.74_6.dat 
+      tail -n +13 dist-energy_395.07.xvg >  ../../../../R4R5R6/dist_395.07_6.dat 
+      tail -n +13 dist-energy_416.32.xvg >  ../../../../R4R5R6/dist_416.32_6.dat 
+      tail -n +13 dist-energy_438.5.xvg  >  ../../../../R4R5R6/dist_438.5_6.dat 
+      tail -n +13 dist-energy_461.67.xvg >  ../../../../R4R5R6/dist_461.67_6.dat 
+      tail -n +13 dist-energy_485.87.xvg >  ../../../../R4R5R6/dist_485.87_6.dat 
+      tail -n +13 dist-energy_511.14.xvg >  ../../../../R4R5R6/dist_511.14_6.dat 
+      tail -n +13 dist-energy_537.54.xvg >  ../../../../R4R5R6/dist_537.54_6.dat 
+
+cd ../../../../R4R5R6/
+
+rm overlap_R4R5.dat overlap_R4R6.dat overlap_R5R6.dat
+
+
+python group_energies.py  dist_269.5_4.dat   dist_269.5_5.dat   10 dist_269.5_R4R5.dat  >>  overlap_R4R5.dat
+python group_energies.py  dist_285.22_4.dat  dist_285.22_5.dat  10 dist_285.22_R4R5.dat  >>  overlap_R4R5.dat
+python group_energies.py  dist_301.66_4.dat  dist_301.66_5.dat  10 dist_301.66_R4R5.dat  >>  overlap_R4R5.dat
+python group_energies.py  dist_318.76_4.dat  dist_318.76_5.dat  10 dist_318.76_R4R5.dat  >>  overlap_R4R5.dat
+python group_energies.py  dist_336.61_4.dat  dist_336.61_5.dat  10 dist_336.61_R4R5.dat  >>  overlap_R4R5.dat
+python group_energies.py  dist_355.26_4.dat  dist_355.26_5.dat  10 dist_355.26_R4R5.dat  >>  overlap_R4R5.dat
+python group_energies.py  dist_374.74_4.dat  dist_374.74_5.dat  10 dist_374.74_R4R5.dat  >>  overlap_R4R5.dat
+python group_energies.py  dist_395.07_4.dat  dist_395.07_5.dat  10 dist_395.07_R4R5.dat  >>  overlap_R4R5.dat
+python group_energies.py  dist_416.32_4.dat  dist_416.32_5.dat  10 dist_416.32_R4R5.dat  >>  overlap_R4R5.dat
+python group_energies.py  dist_438.5_4.dat   dist_438.5_5.dat   10 dist_438.5_R4R5.dat  >>  overlap_R4R5.dat
+python group_energies.py  dist_461.67_4.dat  dist_461.67_5.dat  10 dist_461.67_R4R5.dat  >>  overlap_R4R5.dat
+python group_energies.py  dist_485.87_4.dat  dist_485.87_5.dat  10 dist_485.87_R4R5.dat  >>  overlap_R4R5.dat
+python group_energies.py  dist_511.14_4.dat  dist_511.14_5.dat  10 dist_511.14_R4R5.dat  >>  overlap_R4R5.dat
+python group_energies.py  dist_537.54_4.dat  dist_537.54_5.dat  10 dist_537.54_R4R5.dat  >>  overlap_R4R5.dat
+                                                                
+python group_energies.py  dist_269.5_4.dat   dist_269.5_6.dat   10 dist_269.5_R4R6.dat  >>  overlap_R4R6.dat
+python group_energies.py  dist_285.22_4.dat  dist_285.22_6.dat  10 dist_285.22_R4R6.dat  >>  overlap_R4R6.dat
+python group_energies.py  dist_301.66_4.dat  dist_301.66_6.dat  10 dist_301.66_R4R6.dat  >>  overlap_R4R6.dat
+python group_energies.py  dist_318.76_4.dat  dist_318.76_6.dat  10 dist_318.76_R4R6.dat  >>  overlap_R4R6.dat
+python group_energies.py  dist_336.61_4.dat  dist_336.61_6.dat  10 dist_336.61_R4R6.dat  >>  overlap_R4R6.dat
+python group_energies.py  dist_355.26_4.dat  dist_355.26_6.dat  10 dist_355.26_R4R6.dat  >>  overlap_R4R6.dat
+python group_energies.py  dist_374.74_4.dat  dist_374.74_6.dat  10 dist_374.74_R4R6.dat  >>  overlap_R4R6.dat
+python group_energies.py  dist_395.07_4.dat  dist_395.07_6.dat  10 dist_395.07_R4R6.dat  >>  overlap_R4R6.dat
+python group_energies.py  dist_416.32_4.dat  dist_416.32_6.dat  10 dist_416.32_R4R6.dat  >>  overlap_R4R6.dat
+python group_energies.py  dist_438.5_4.dat   dist_438.5_6.dat   10 dist_438.5_R4R6.dat  >>  overlap_R4R6.dat
+python group_energies.py  dist_461.67_4.dat  dist_461.67_6.dat  10 dist_461.67_R4R6.dat  >>  overlap_R4R6.dat
+python group_energies.py  dist_485.87_4.dat  dist_485.87_6.dat  10 dist_485.87_R4R6.dat  >>  overlap_R4R6.dat
+python group_energies.py  dist_511.14_4.dat  dist_511.14_6.dat  10 dist_511.14_R4R6.dat  >>  overlap_R4R6.dat
+python group_energies.py  dist_537.54_4.dat  dist_537.54_6.dat  10 dist_537.54_R4R6.dat  >>  overlap_R4R6.dat
+                                                                
+python group_energies.py  dist_269.5_5.dat   dist_269.5_6.dat   10 dist_269.5_R5R6.dat  >>  overlap_R5R6.dat
+python group_energies.py  dist_285.22_5.dat  dist_285.22_6.dat  10 dist_285.22_R5R6.dat  >>  overlap_R5R6.dat
+python group_energies.py  dist_301.66_5.dat  dist_301.66_6.dat  10 dist_301.66_R5R6.dat  >>  overlap_R5R6.dat
+python group_energies.py  dist_318.76_5.dat  dist_318.76_6.dat  10 dist_318.76_R5R6.dat  >>  overlap_R5R6.dat
+python group_energies.py  dist_336.61_5.dat  dist_336.61_6.dat  10 dist_336.61_R5R6.dat  >>  overlap_R5R6.dat
+python group_energies.py  dist_355.26_5.dat  dist_355.26_6.dat  10 dist_355.26_R5R6.dat  >>  overlap_R5R6.dat
+python group_energies.py  dist_374.74_5.dat  dist_374.74_6.dat  10 dist_374.74_R5R6.dat  >>  overlap_R5R6.dat
+python group_energies.py  dist_395.07_5.dat  dist_395.07_6.dat  10 dist_395.07_R5R6.dat  >>  overlap_R5R6.dat
+python group_energies.py  dist_416.32_5.dat  dist_416.32_6.dat  10 dist_416.32_R5R6.dat  >>  overlap_R5R6.dat
+python group_energies.py  dist_438.5_5.dat   dist_438.5_6.dat   10 dist_438.5_R5R6.dat  >>  overlap_R5R6.dat
+python group_energies.py  dist_461.67_5.dat  dist_461.67_6.dat  10 dist_461.67_R5R6.dat  >>  overlap_R5R6.dat
+python group_energies.py  dist_485.87_5.dat  dist_485.87_6.dat  10 dist_485.87_R5R6.dat  >>  overlap_R5R6.dat
+python group_energies.py  dist_511.14_5.dat  dist_511.14_6.dat  10 dist_511.14_R5R6.dat  >>  overlap_R5R6.dat
+python group_energies.py  dist_537.54_5.dat  dist_537.54_6.dat  10 dist_537.54_R5R6.dat  >>  overlap_R5R6.dat
+
+

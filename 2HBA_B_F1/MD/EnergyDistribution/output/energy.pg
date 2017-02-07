@@ -1,0 +1,21 @@
+#!/usr/local/bin/gnuplot
+set term pdf
+set output "output-energy.pdf"
+ 
+
+plot "energy_269.5.xvg" u 1:2  with lines lw 3.5 t "269.5" smooth bezier \
+, "energy_282.24.xvg" u 1:2 with lines lw 3.5 t "282.24" smooth bezier \
+, "energy_295.43.xvg" u 1:2 with lines lw 3.5 t "295.43" smooth bezier \
+, "energy_309.12.xvg" u 1:2 with lines lw 3.5 t "309.12" smooth bezier \
+, "energy_323.3.xvg" u 1:2 with lines lw 3.5 t "323.3" smooth bezier \
+, "energy_338.01.xvg" u 1:2 with lines lw 3.5 t "338.01" smooth bezier \
+, "energy_353.26.xvg" u 1:2 with lines lw 3.5 t "353.26" smooth bezier \
+, "energy_369.06.xvg" u 1:2 with lines lw 3.5 t "369.06" smooth bezier \
+, "energy_385.44.xvg" u 1:2 with lines lw 3.5 t "385.44" smooth bezier \
+, "energy_402.43.xvg" u 1:2 with lines lw 3.5 t "402.43" smooth bezier \
+, "energy_420.05.xvg" u 1:2 with lines lw 3.5 t "420.05" smooth bezier \
+, "energy_438.31.xvg" u 1:2 with lines lw 3.5 t "438.31" smooth bezier \
+, "energy_457.24.xvg" u 1:2 with lines lw 3.5 t "457.24" smooth bezier \
+, "energy_476.93.xvg" u 1:2 with lines lw 3.5 t "476.93" smooth bezier
+, "energy_497.29.xvg" u 1:2 with lines lw 3.5 t "497.29" smooth bezier
+, "energy_518.39.xvg" u 1:2 with lines lw 3.5 t "518.39" smooth bezier

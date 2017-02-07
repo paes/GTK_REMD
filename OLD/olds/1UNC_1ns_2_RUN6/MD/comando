@@ -1,0 +1,2 @@
+sed -i s/"cut=4.0"/"cut=8.0"/ remd_001_small_*.mdin
+

@@ -1,0 +1,5 @@
+source leaprc.ff12SB
+Extended = sequence { NSER TRP THR TRP GLU ASN GLY LYS TRP THR TRP CLYS}
+SaveAmberParm Extended job_id.prmtop job_id.inpcrd
+SavePdb Extended 1LE1_extended.pdb
+quit

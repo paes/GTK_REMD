@@ -1,0 +1,5 @@
+source leaprc.ff12SB
+Extended = sequence { NASN LEU TYR ILE GLN TRP LEU LYS ASP GLY GLY PRO SER SER GLY ARG PRO PRO PRO CSER}
+SaveAmberParm Extended job_id.prmtop job_id.inpcrd
+SavePdb Extended 1L2Y_extended.pdb
+quit

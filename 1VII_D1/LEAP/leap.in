@@ -1,0 +1,5 @@
+source leaprc.ff12SB
+Extended = sequence { NMET LEU SER ASP GLU ASP PHE LYS ALA VAL PHE GLY MET THR ARG SER ALA PHE ALA ASN LEU PRO LEU TRP LYS GLN GLN ASN LEU LYS LYS GLU LYS GLY LEU CPHE}
+SaveAmberParm Extended job_id.prmtop job_id.inpcrd
+SavePdb Extended 1VII_extended.pdb
+quit

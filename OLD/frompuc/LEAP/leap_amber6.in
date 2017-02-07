@@ -1,0 +1,17 @@
+source leaprc.ff99
+#
+#Sequência original 1UNC.pdb
+#ACE LEU SER ILE GLU ASP PHE THR GLN ALA PHE GLY MET          
+#THR PRO ALA ALA PHE SER ALA LEU PRO ARG TRP LYS GLN          
+#GLN ASN LEU LYS LYS GLU LYS GLY LEU PHE
+#
+seq = { NLEU SER ILE GLU ASP PHE THR GLN ALA PHE GLY MET THR          
+	 PRO ALA ALA PHE SER ALA LEU PRO ARG TRP LYS GLN GLN 
+	 ASN LEU LYS LYS GLU LYS GLY LEU CPHE }
+1UNC_P = loadPdbUsingSeq ../1UNC01-Hs_Ext.pdb seq
+#
+set default PBradii amber6
+SaveAmberParm 1UNC_P 1UNC_P_radii_A6.top 1UNC_P_radii_A6.crd 
+SavePdb 1UNC_P 1UNC_P_radii_A6.pdb
+quit 
+

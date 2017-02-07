@@ -1,0 +1,18 @@
+source leaprc.ff12SB
+
+#Sequência original 1UNC.pdb
+#ACE LEU SER ILE GLU ASP PHE THR GLN ALA PHE GLY MET          
+#THR PRO ALA ALA PHE SER ALA LEU PRO ARG TRP LYS GLN          
+#GLN ASN LEU LYS LYS GLU LYS GLY LEU PHE
+
+seq = { NLEU SER ILE GLU ASP PHE THR GLN ALA PHE GLY MET THR          
+	 PRO ALA ALA PHE SER ALA LEU PRO ARG TRP LYS GLN GLN 
+	 ASN LEU LYS LYS GLU LYS GLY LEU CPHE }
+1UNC_P = loadPdbUsingSeq ../1UNC01-Hs_Ext.pdb seq
+#solvateBox COMPLEXO TIP3PBOX 10
+#addIons COMPLEXO Na+ 0
+set default PBradii mbondi3
+SaveAmberParm 1UNC_P 1UNC_P_mbondi3_A12.top 1UNC_P_mbondi3_A12.crd 
+SavePdb 1UNC_P 1UNC_P_mbondi3_A12.pdb
+quit 
+

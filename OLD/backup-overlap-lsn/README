@@ -1,0 +1,16 @@
+PARA GERAR GRAFICOS COM LN P(T2) / PT1
+
+eu rodo primeiro o preciso_distr_1ns.sh  ou o 456 (ambos sao versoes modificadas do antigo preciso e preciso2 utilizados para gerar as inputs necessarias para calcular overlap)
+
+depois, na pasta que eles criam ex. R1R2R3_distr , eu entro e rodo o verify_distribution.sh
+
+
+testes criando o LN
+bash preciso_distr_1ns.sh remd_002 10
+o correto seria utilizar os limites para x e y  bash preciso_distr_1ns.sh remd_002 10 -500 0 -4 3
+ 
+gera resultados em R1R2R3_distr
+
+
+
+
