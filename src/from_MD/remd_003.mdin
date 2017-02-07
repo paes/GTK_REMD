@@ -1,0 +1,53 @@
+# SHAKE on hyds only. Using Generalized Born Model,gb=1.CUT=6.0
+ &cntrl
+    imin=0,
+    ntx=5, irest=1, ntrx=1,
+    ntxo=2, ntpr=500, ntave=0, ntwr=100000,
+    iwrap=0, ntwx=500, ntwv=0, ntwe=0,
+    ibelly=0, ntr=0, ioutfm=1,
+
+
+    nstlim=500, nscm=500, t=0.0, dt=0.002, nrespa=1,
+
+    ntt=1,tempi=10.0, temp0=XXXXX, ig=RANDOM_NUMBER, tautp=5.0,
+    gamma_ln=0, vlimit=-1.0,
+    ntp=0, pres0=1.0, comp=44.6, taup=1.0,
+    ntc=2, tol=0.00001, jfastw=0,
+    ntf=2, ntb=0, dielc=1.0, cut=6.0, nsnb=10,
+    igb=1, intdiel=1.0, extdiel=78.5, saltcon=0.0, rgbmax=10.0,
+    rbornstat=0, offset=0.09, gbsa=1, surften=0.005,      
+    nmropt=1,
+    numexchg=1000,
+/
+ &wt TYPE='END'
+ /
+DISANG=job_id_chir.dat
+
+    # editar ou nao nstlim???
+    # SIM, passou de 500000 para 500 (pois sao 1000exchanges, em cada um 500 passos)
+    # nstlim = 500  During REMD this variable determines the nr of MD steps between each exchange attempt. In this case we set it to 500 steps which with a 2fs timestep gives us 1ps 
+    # between exchange attempts.
+    # numexchg = 1000  This specifies the number of exchange attempts during the simulation. The total simulation length will be numexch * nstlim * dt which in this case yields 1ns of simulation.
+
+
+  # abaixo o que eh diferente do remd que eu tinha
+  #  aqui remd
+  # nstlim=500, dt=0.002, //acabou ficando o mesmo nesse caso (1ns)
+  # ntt=3,  // vou usar 1 (por enquanto, avaliando isso), Use the Berendsen Thermostat (ntt=1) or Anderson Thermostat (ntt=2) instead of the Langevin Thermostat
+  #  (ntt=3). Langevin simulations require very large numbers of random numbers which slows performance slightly.
+
+  # gamma_ln=1.0, //vou usar 0, pois nao é L(lang)D, e sim MD
+  # ig=RANDOM_NUMBER,
+  # vlimit, setei -1 (requisito da GPU)
+  # nscm=1000,   vou deixar 500, pois meus simulation steps antes de exchange attempts é 1000
+  # igb=5, //vou deixar 1, mas no futuro posso testar, importante frisar que, com igb=5, eh preciso usar "set default PBradii mbondi2"  no leap
+
+  # cut=999.0, rgbmax=999.0,
+  # ntpr=100, // Energia escrita de 100? naoo... de 500 em 500
+  # ntwx=1000 // trajectory write vou usar 500 por enquanto (para ter uma energia para cada trajetoria), 
+  # ntwr=100000,//relacionado com o restart! vou deixar 100000, assim sendo dividirei as possibilidades de reinicio em 1/5 2/5 3/5 e 4/5
+  # esses vou add (nao tem osmar, tem remd):
+  # nmropt=1,
+  # numexchg=1000,
+
+
